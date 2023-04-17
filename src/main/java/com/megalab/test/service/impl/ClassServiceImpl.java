@@ -15,9 +15,9 @@ public class ClassServiceImpl implements ClassService {
     private final ClassesRepo repo;
 
     @Override
-    public Battle findClassesByParam(String res, String result) {
+    public Battle findClassesByParam(String res) {
         Battle battle = new Battle();
-        battle.setClass_names(repo.classes(res, result));
+        battle.setClass_names(repo.classes(res, res));
         return battle;
     }
 }
